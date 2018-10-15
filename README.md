@@ -1,2 +1,2 @@
 # Android
-Android projects
+Adnroid app for Anomalija.net
