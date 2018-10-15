@@ -11,6 +11,8 @@ public class AboutUsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+//      showing activity_about_us
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
         getSupportActionBar().setTitle(Html.fromHtml("<font color='#111'>Anomalija</font>"));
