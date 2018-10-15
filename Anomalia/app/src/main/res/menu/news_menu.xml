@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    
+    >
+    <item app:showAsAction="always"
+        android:id="@+id/share"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="@string/podijeli"
+        ></item>
+    <item app:showAsAction="ifRoom"
+        android:id="@+id/text_size"
+        android:icon="@drawable/ic_text_fields_black_24dp"
+        android:title="@string/velicina_teksta" ></item>
+    
+</menu> 

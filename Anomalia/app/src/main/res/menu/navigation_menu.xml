@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/home"
+        android:title="@string/pocetna"
+        android:icon="@drawable/ic_home_black_24dp" />
+    <item
+        android:id="@+id/facebook"
+        android:title="@string/facebook"
+        android:icon="@drawable/facebook" />
+    <item
+        android:id="@+id/instagram"
+        android:title="@string/instagram"
+        android:icon="@drawable/instagram"/>
+    <item
+        android:id="@+id/anomalija"
+        android:title="@string/anomalija_net"
+        android:icon="@drawable/ic_web_black_24dp"/>
+</menu>

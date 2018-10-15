@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "1052630605403",
+    "firebase_url": "https://test1-12409.firebaseio.com",
+    "project_id": "test1-12409",
+    "storage_bucket": "test1-12409.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052630605403:android:c04788c3dae0d565",
+        "android_client_info": {
+          "package_name": "com.example.bojan.anomalia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052630605403-4j3u7bc2vsoffvmios12uh2mma0t4rsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxuckGXQ42EaJSOfvqsAeM8FogNs9TTfE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052630605403:android:58797ada28757943",
+        "android_client_info": {
+          "package_name": "net.anomalija.portal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052630605403-4j3u7bc2vsoffvmios12uh2mma0t4rsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxuckGXQ42EaJSOfvqsAeM8FogNs9TTfE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

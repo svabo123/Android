@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Anomalija</string>
+    <string name="naslov">LUKAČ: ZOLJA ISPALILA SAMU SEBE NA ZGRADU EUROHERCA</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Anomalija</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="close">Close</string>
+    <string name="open">Open</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="about_us">Anomalija je satirično blog izdanje trenutno bez izdavača. Anomalija koristi izmišljene osobe i institucije u svojim pričama osim kada su javne ličnosti i prave institucije i same objekat satire. Svaka sličnost sa pravim ljudima i institucijama je slučajna.</string>
+    <string name="copyright">COPYRIGHT 2018. © ANOMALIJA; SVA PRAVA REZERVISANA.</string>
+    <string name="pocetna">Početna</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="anomalija_net">Anomalija.net</string>
+    <string name="obavjestenja">Obavještenje</string>
+    <string name="velicina_teksta">Veličina teksta:</string>
+    <string name="verzija_aplikacije">Verzija aplikacije</string>
+    <string name="sample">tekst</string>
+    <string name="podijeli">Podijeli</string>
+    <string name="prazno" />
+    <string name="kategorija">Kategorija</string>
+    <string name="autor">Autor teksta:</string>
+    <string name="datum">Datum objave:</string>
+    <string name="o_nama">O nama</string>
+    <string name="podesavanja">Podešavanja</string>
+    <string name="obavjestenje">Obavještenja</string>
+    <string-array name="velicine_teksta">
+        <item>Mala</item>
+        <item>Srednja</item>
+        <item>Velika</item>
+    </string-array>
+
+</resources>
