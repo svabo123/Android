@@ -3,6 +3,7 @@ package net.anomalija.portal.anomalia.Model;
 import java.io.Serializable;
 
 public class Category implements Serializable {
+
     private int category_id;
     private String name;
     public Category(int id, String name){

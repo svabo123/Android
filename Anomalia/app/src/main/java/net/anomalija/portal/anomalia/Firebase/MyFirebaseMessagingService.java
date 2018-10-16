@@ -38,7 +38,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             builder.setAutoCancel(true);
             Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             builder.setSound(alarmSound);
-            builder.setTicker("Ovo je tiker");
+            builder.setTicker("");
             builder.setSmallIcon(R.drawable.ic_launcher_background);
             builder.setContentText(remoteMessage.getData().get("message1"));
 //            builder.setContentTitle(remoteMessage.getData().get("message"));

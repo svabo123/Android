@@ -36,9 +36,8 @@ public class NotificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
         intent = getIntent();
-        Log.e("ID", intent.getStringExtra("id"));
         id = intent.getStringExtra("id");
-        Log.e(TAG, "Loaded from Notification");
+
         if (isConnected()) {
             final RequestQueue requestQueue = Volley.newRequestQueue(this);
             StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.gettingNewsFromId + id, new Response.Listener<String>() {
@@ -51,14 +50,14 @@ public class NotificationActivity extends AppCompatActivity {
                         getApplicationContext().startActivity(intent1);
 
                     } else
-                        Toast.makeText(getApplicationContext(), "GRESKA NA SERVERU 2", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "GREŠKA NA SERVERU", Toast.LENGTH_LONG).show();
                 }
             },
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 //                            Log.e("ERRROR", error.getMessage().toString().equals("") ? error.getMessage().toString() : "Greska u ucitavanju");
-                            Toast.makeText(getApplicationContext(), "GRESKA U KONEKCIJI", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "GREŠKA U KONEKCIJI", Toast.LENGTH_LONG).show();
                             setContentView(R.layout.no_internet);
 
                         }
@@ -81,7 +80,6 @@ public class NotificationActivity extends AppCompatActivity {
         super.onRestart();
         Intent i = new Intent(NotificationActivity.this, NotificationActivity.class);
         i.putExtra("id", intent.getStringExtra("id"));
-        
         startActivity(i);
         finish();
     }
@@ -113,11 +111,7 @@ public class NotificationActivity extends AppCompatActivity {
                 continue;
             }
         }
-
         return news;
     }
-
-
-
 
 }

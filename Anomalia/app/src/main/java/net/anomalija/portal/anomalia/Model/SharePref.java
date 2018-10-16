@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
+// used for getting single instance of SharePreferences and SharePreferences.Editor. Singlton patern used
 public class SharePref {
     public static final String NOTIFICATION = "notification";
     public static final String TEXT_SIZE = "textSize";
@@ -11,8 +12,7 @@ public class SharePref {
     private static SharedPreferences text_sizes;
     private static SharedPreferences.Editor notification_editor;
     private static SharedPreferences.Editor text_editor;
-
-
+    
     //prevent creating multiple instances by making the constructor private
     private SharePref(){}
 

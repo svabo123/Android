@@ -40,6 +40,7 @@ import net.anomalija.portal.anomalia.Model.SharePref;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+
 //    declaring vars
     ArrayList<News> news = null;
     ArrayList<Category> categories = null;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-//       setting parametars for drawerMenu
+//       setting parametars for drawerMenu, and adding category
     private void displayMenu() {
         if (type == MAIN)
         getSupportActionBar().setTitle(Html.fromHtml("<font color='#112'>Anomalija</font>"));
@@ -96,11 +97,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         final NavigationView navigationView = findViewById(R.id.menu_navigation);
         navigationView.setNavigationItemSelectedListener(this);
         drawer = findViewById(R.id.drawer);
-
         toggle = new ActionBarDrawerToggle(
                 this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         toggle.setDrawerIndicatorEnabled(true);
-        
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -215,7 +214,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
-//    setting notificaton and setting icon to notification
+//    setting notificaton and set icon to notification
     private void setNotification(MenuItem item) {
 
         SharedPreferences.Editor editor = SharePref.getEditior(this, SharePref.NOTIFICATION);
@@ -236,6 +235,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+//    handling click on social network menu
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -261,12 +261,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 //    open MainActivity, set homepage
     private boolean startHomeIntent(){
-
-
             Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
             return true;
-
     }
 
 //      checking network status

@@ -25,8 +25,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private static final String TAG = "RecyclerViewAdapter";
     private Context coActivity;
     private ArrayList<News> list;
-    private int type;
-    public static final int MAIN = 1;
     public static final int CATEGORY = 2;
     private Category category;
 
@@ -34,7 +32,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public RecyclerViewAdapter(Context context, ArrayList<News> news, Category category) {
         list = news;
         coActivity = context;
-
         this.category = category;
 }
 
@@ -73,7 +70,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Intent intent = new Intent(coActivity, NewsActivity.class);
                 intent.putExtra("news", news);
                 intent.putExtra("category", category);
-            
                 coActivity.startActivity(intent);
             }
         });

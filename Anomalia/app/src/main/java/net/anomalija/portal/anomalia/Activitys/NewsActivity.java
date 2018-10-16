@@ -18,7 +18,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -27,7 +26,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-
 import net.anomalija.portal.R;
 import net.anomalija.portal.anomalia.Model.Category;
 import net.anomalija.portal.anomalia.Model.Constants;
@@ -38,8 +36,6 @@ import java.io.Serializable;
 
 public class NewsActivity extends AppCompatActivity implements Serializable{
 
-    private static final String TAG = "NewsActivity ";
-    
     private TextView sadrzaj;
     private TextView autor;
     private TextView datum;
@@ -54,10 +50,6 @@ public class NewsActivity extends AppCompatActivity implements Serializable{
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
     private  Intent extras;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,11 +119,8 @@ public class NewsActivity extends AppCompatActivity implements Serializable{
         requestQueue.add(stringRequest1);
 
         naslov.setText(news.getNaslov());
-
-        //        postavljanje slike
-
-
-
+        
+//        setting images
         RequestOptions requestOptions = new RequestOptions();
         requestOptions.centerCrop();
         RequestOptions requestOptions1 = new RequestOptions();
@@ -163,7 +152,7 @@ public class NewsActivity extends AppCompatActivity implements Serializable{
                 intent.setAction(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_TEXT, guid);
-                startActivity(Intent.createChooser(intent, "Podijeli"));
+                startActivity(Intent.createChooser(intent, "Podijelti članak"));
                 return true;
             case R.id.text_size:
 //                setting text size in news activity
@@ -218,6 +207,8 @@ public class NewsActivity extends AppCompatActivity implements Serializable{
         builder.show();
     }
 
+
+//      initialization
     private void initialization() {
         kategorija = findViewById(R.id.kategorija);
         sadrzaj = findViewById(R.id.sadrzaj);
@@ -240,10 +231,9 @@ public class NewsActivity extends AppCompatActivity implements Serializable{
         sadrzaj.setText(content);
         text_size = preferences.getFloat("size", 20);
         sadrzaj.setTextSize((float) text_size);
-//                       set autor
+//      set autor
         autor.setText("Autor teksta: " + autor_text);
-//                       set time
-
+//      set time
         datum.setText(datum_text.split(" ")[0]);
 
 
@@ -251,16 +241,11 @@ public class NewsActivity extends AppCompatActivity implements Serializable{
 
     @Override
     public void onBackPressed() {
-        
         Intent intent = new Intent(NewsActivity.this, MainActivity.class);
         intent.putExtra("category", category);
         startActivity(intent);
         super.onBackPressed();
-
     }
-
-
-//    fecthing content from server
 
 //    checking internet status
     private boolean isConnected() {
@@ -275,7 +260,6 @@ public class NewsActivity extends AppCompatActivity implements Serializable{
     }
 
     //    called from metohod refresh, restarting app
-
     @Override
     protected void onRestart() {
         super.onRestart();

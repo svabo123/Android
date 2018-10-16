@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class News implements Serializable {
 
-    //    ova klasa sluzi za modelovanje podataka koji se korsite za dobijanja novosti
+    //    this class is used for modeling data for displaing news
     private int id;
     private String naslov;
     private String sadrzaj;

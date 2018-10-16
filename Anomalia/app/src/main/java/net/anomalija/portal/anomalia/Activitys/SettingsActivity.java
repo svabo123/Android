@@ -80,7 +80,6 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
             String versionText = pInfo.versionName;
             version.setText(versionText);
-            Log.e("VERSION", versionText);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
             version.setText("nepoznata");
