@@ -25,7 +25,7 @@ import net.anomalija.portal.anomalia.Model.SharePref;
 import java.util.HashMap;
 import java.util.Map;
 
-
+// use to handling notification 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
